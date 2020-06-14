@@ -1,0 +1,49 @@
+<div class="container login-box-body">
+
+  <div class="row row-centered pos">
+    <div class="col-md-5 col-md-offset-4" id="divLogin">
+      <div class="login-panel panel  whitebg">
+        <div class="login-panel-heading text-center ">
+          <img src="assets/img-layout/KALE.png" alt="Client Logo" />
+        </div>
+
+        <div class="panel-body">
+          <form [formGroup]="loginForm">
+            <fieldset>
+              <div class="row">
+                <div class="form-group">
+                  <igx-input-group type="border">
+                    <input igxInput formControlName="LoginName" type="text" autocomplete="off" placeholder="Email" />
+                    <igx-prefix>
+                      <img style="height:16px;" src="/assets/img-layout/envelope.svg">
+
+                    </igx-prefix>
+                  </igx-input-group>
+                </div>
+                <div class="form-group">
+                  <igx-input-group type="border">
+                    <input igxInput formControlName="Password" type="text" autocomplete="off" placeholder="Password" />
+                    <igx-prefix>
+                      <img style="height:16px;" src="/assets/img-layout/lock.svg">
+                    </igx-prefix>
+                  </igx-input-group>
+                </div>
+                <!-- <div class="form-group">
+                  <igx-checkbox><span id="label">Remember me</span>
+                  </igx-checkbox>
+                </div> -->
+                <div class="form-group">
+                  <button igxButton [disabled]="loginForm.invalid" (click)="login(loginForm)">Login</button>
+                </div>
+                <div class="form-groups">
+                  <a class="forgot-password" [routerLink]="'/forgotpassword'" accesskey="p">
+                    <span id="label">Forgot Password?</span>
+                  </a>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

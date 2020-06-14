@@ -1,0 +1,13 @@
+// CSS Reset, comment out if not required or using a different module
+@import '~minireset.css/minireset';
+/* You can add global styles to this file, and also import other style files */
+
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import "~igniteui-angular/lib/core/styles/themes/index";
+@include igx-core();
+@include igx-theme($default-palette);
+
+.ps .ps__scrollbar-y-rail {
+  left: 3px;
+  right: auto;
+}
